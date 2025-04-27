@@ -14,7 +14,7 @@ in
   config = lib.mkIf (config.stylix.enable && config.stylix.targets.wofi.enable) {
     programs.wofi.style = with colors; ''
       window {
-        font-family: "${monospace.name}";
+        font-family: "${monospace.name}, ${emoji.name}";
         font-size: ${toString sizes.popups}pt;
 
         background-color: ${base00};
